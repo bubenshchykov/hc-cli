@@ -1,7 +1,7 @@
 {
-  "name": "hm",
+  "name": "hc-cli",
   "version": "0.0.0",
-  "description": "ping @mafintosh in Hipchat",
+  "description": "HipChat cli",
   "main": "index.js",
   "dependencies": {
     "commander": "",
@@ -9,7 +9,8 @@
     "userhome": "~0.1.0",
     "request": "~2.34.0",
     "colors": "~0.6.2",
-    "readline": "0.0.3"
+    "readline": "0.0.3",
+    "beepbeep": "~1.2.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -17,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bubenshchykov/hm.git"
+    "url": "git://github.com/bubenshchykov/hc-cli.git"
   },
   "keywords": [
     "hipchat",
@@ -27,10 +28,10 @@
   "author": "bubenshchykov",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/bubenshchykov/hm/issues"
+    "url": "https://github.com/bubenshchykov/hc-cli/issues"
   },
-  "homepage": "https://github.com/bubenshchykov/hm",
+  "homepage": "https://github.com/bubenshchykov/hm-cli",
   "bin": {
-    "hm": "./bin/cli.js"
+    "hip": "./bin/cli.js"
   }
 }

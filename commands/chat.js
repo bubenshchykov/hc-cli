@@ -1,6 +1,7 @@
 var db = require('../common/db');
 var Api = require('../common/api');
 var readline = require('readline');
+var beep = require('beepbeep');
 require('colors');
 
 module.exports = function(roomId) {
@@ -20,7 +21,9 @@ module.exports = function(roomId) {
 
 		function onMessage(data) {
 			var from = data.from.name || data.from + ': ';
-			return console.log(from.yellow, data.message.blue);
+			console.log(from.yellow, data.message.blue);
+			return beep([10, 10]);
+
 		}
 
 		function onError(err) {

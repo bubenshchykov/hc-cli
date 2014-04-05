@@ -1,22 +1,23 @@
-hm
+
+HipChat cli
 ==
 
-Hipchat Mathias - ping @mafintosh in Hipchat
-
 ```javascript
-npm install hm -g
+npm install hc-cli -g
 
 // your hipchat authtoken from settings page
-hm init <authtoken>
+hip init <authtoken>
 
-// sent text message to Mathias
-hm pingm <message>
-
-// sent text message to other guy
-hm ping <user> <message>
+// sent a private message
+hip ping <user> <message>
 
 // join the chat room
-hm chat <room> 
+hip chat <room> 
+```
+
+And of course you can get directly to Mathias
+```javascript
+hip pingm <message>
 ```
 
 That's a draft version done for CPH hackaton #5
