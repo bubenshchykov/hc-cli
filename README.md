@@ -1,21 +1,20 @@
-
 HipChat cli
 ==
 
 ```javascript
 npm install hc-cli -g
-
-// your hipchat authtoken from settings page
-hip init <authtoken>
-
-// sent a private message
-hip ping <user> <message>
-
-// join the chat room
-hip chat <room> 
+hip init <authtoken>      // hipchat authtoken from your settings
 ```
 
-And of course you can get directly to Mathias
+![!alt tag](http://s13.postimg.org/glysi4wzr/Screen_Shot_2014_04_06_at_12_04_10_AM.png)
+
+
+```javascript
+hip ping <user> <message> // sent a private message
+hip chat <room>           // join the chat room
+```
+
+And of course you can get directly to [Mathias](https://github.com/mafintosh)
 ```javascript
 hip pingm <message>
 ```
