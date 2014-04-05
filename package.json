@@ -1,0 +1,36 @@
+{
+  "name": "hm",
+  "version": "0.0.0",
+  "description": "ping @mafintosh in Hipchat",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "",
+    "nedb": "~0.10.5",
+    "userhome": "~0.1.0",
+    "request": "~2.34.0",
+    "colors": "~0.6.2",
+    "readline": "0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bubenshchykov/hm.git"
+  },
+  "keywords": [
+    "hipchat",
+    "cli",
+    "mafintosh"
+  ],
+  "author": "bubenshchykov",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/bubenshchykov/hm/issues"
+  },
+  "homepage": "https://github.com/bubenshchykov/hm",
+  "bin": {
+    "hm": "./bin/cli.js"
+  }
+}
