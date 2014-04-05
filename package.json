@@ -1,6 +1,6 @@
 {
   "name": "hc-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "HipChat cli",
   "dependencies": {
     "commander": "",
@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/bubenshchykov/hc-cli/issues"
   },
-  "homepage": "https://github.com/bubenshchykov/hm-cli",
+  "homepage": "https://github.com/bubenshchykov/hc-cli",
   "bin": {
     "hip": "./bin/cli.js"
   }
