@@ -1,7 +1,7 @@
 {
   "name": "hc-cli",
-  "version": "0.0.6",
-  "description": "HipChat cli",
+  "version": "0.0.7",
+  "description": "hipchat for terminal",
   "dependencies": {
     "commander": "",
     "nedb": "~0.10.5",

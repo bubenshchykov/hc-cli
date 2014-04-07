@@ -1,4 +1,4 @@
-hipchat cli
+hipchat for terminal
 ==
 
 ```javascript
