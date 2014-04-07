@@ -6,7 +6,7 @@ var readline = require('readline');
 var beep = require('beepbeep');
 
 module.exports = function(roomId) {
-	console.log('joining..'.green);
+	console.log('joining the room..'.green);
 	db.getAuthtoken(function(err, data){
 		var api = Api(data.authtoken);
 		var hub = api.history(roomId)
@@ -28,7 +28,7 @@ module.exports = function(roomId) {
 		}
 
 		function onError(err) {
-			console.log(err.red);
+			error(err);
 			return process.exit(-1);
 		}
 
@@ -38,9 +38,13 @@ module.exports = function(roomId) {
 			}
 			return api.chat(roomId, text, function(err) {
 				if (err) {
-					console.log(err.red);
+					error(err);
 				}
 			});
+		}
+
+		function error(err) {
+			console.log('oops!'.red, JSON.stringify(err, undefined, 2).red);
 		}
 	});
 }

@@ -9,9 +9,10 @@ module.exports = function(user, message) {
 	db.getAuthtoken(function(err, data){
 		api(data.authtoken).message(user, message, function(err){
 			if (err) {
-				console.log(err);
+				console.log('oops!'.red, JSON.stringify(err, undefined, 2).red);
+			} else {
+				console.log('sent!'.green);
 			}
-			console.log('sent!'.green);
 			return process.exit(-1);
 		});
 	});

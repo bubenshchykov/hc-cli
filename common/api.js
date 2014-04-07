@@ -39,7 +39,7 @@ module.exports = function(authtoken) {
 			}
 		}, function (err, res) {
 			if (err || res.statusCode !== 204) {
-				err = err || {error: res.body};
+				err || (err = res.body || {code: res.statusCode});
 				return cb(err);
 			};
 			return cb();
@@ -51,17 +51,18 @@ module.exports = function(authtoken) {
 	function history(roomId) {
 		var shownIds = [];
 		var ev = new EventEmitter();
-		poll();
+		poll(0);
 
 		return ev;
 
-		function poll() {
+		function poll(wait) {
 			setTimeout(function(){
 				request.get({
 					url: auth('room/' + roomId + '/history'),
 					json: true
 				}, function (err, res) {
 					if (err || res.statusCode !== 200) {
+						err = res.body;
 						return ev.emit('error', err);
 					}
 					if (res.body.items) {
@@ -73,9 +74,11 @@ module.exports = function(authtoken) {
 							}
 						});
 					}
-					return poll();
+					/* api rate limit is 100 reqs / 300 sec
+					   in 5 min u can send 40 messages and have 60 history polling reqs with 5-sec frequency */
+					return poll(5000);
 				});
-			}, 2000);
+			}, wait);
 		}
 
 		return ev;
