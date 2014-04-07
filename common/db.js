@@ -1,7 +1,7 @@
 var Datastore = require('nedb');
 var homedir = require('userhome');
 var db = new Datastore({
-	filename: homedir('.hm.db'),
+	filename: homedir('.hc-cli.db'),
 	autoload: true
 });
 

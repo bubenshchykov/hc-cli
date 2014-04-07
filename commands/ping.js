@@ -11,7 +11,7 @@ module.exports = function(user, message) {
 			if (err) {
 				console.log(err);
 			}
-			console.log('gotcha!'.green);
+			console.log('sent!'.green);
 			return process.exit(-1);
 		});
 	});
