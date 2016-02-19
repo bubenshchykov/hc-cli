@@ -1,6 +1,12 @@
 hipchat for terminal
 ==
 
+Get your authtoken from Account Settings. Be sure to select all scopes.
+
+![!get auth token](http://s13.postimg.org/42vr01ckn/create_New_Token.png)
+
+---
+
 ```javascript
 npm install hc-cli -g
 hip init <authtoken>      // hipchat authtoken from your settings
